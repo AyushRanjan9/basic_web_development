@@ -1,0 +1,104 @@
+<html>
+<body>
+    <script src="MOD1.js"></script>
+
+<ul>
+    <li>First element</li>
+    <li>Second elemeSnt</li>
+    <li>Third element</li>
+</ul>
+
+  <p class="myClass">This is a paragraph with a class.</p>
+
+  <div id=""myDiv>this is a div</div>
+
+  <!-- //changing style -->
+  <!-- <button id="myButton">Click Me</button> -->
+
+  <button id="myButton">Click Me</button>
+
+  <img id="myImage" src="https://i.pinimg.com/736x/26/dd/4a/26dd4a4f7f78755660223bc94eb55cc3.jpg" alt="An image">
+  <p id="p2">Hello World!</p>
+<a id="a1">Welcome to my Room</a>
+<br>
+<button id="btn" >for more detail</button>
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button"
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+<h1 onclick="changeText(this)">Click on this text!</h1>
+<button onclick="displayDate(this)">Date </button>
+
+
+  <script>
+   
+    //root node
+    // console.log(document.body.childNodes)
+    // console.log(document.firstElementChild) 
+    // //sibling
+    // const ulTag=document.body.children[0]
+    // console.log(ulTag.document.childNodes)
+
+    //to access all element of <li>
+
+      var listitems= document.getElementsByTagName("li");
+
+// change the content of <li> items as u want
+
+    listitems[1].innerHTML=" second-2 elements";
+
+//access lement by class name
+     
+    var elementsWithClass= document.getElementsByClassName("myClass");
+//create a new element
+     var newParagraph=document.createElement("p");
+     newParagraph.innerHTML="This is new paragraph line"
+// append it to an existing element
+     var myDiv= document.getElementById("myDiv");
+     myDiv.appendChild(newParagraph);
+
+//access the button element
+     var button= document.getElemnetById("myButton");
+
+//change it`s style
+     button.style.backgroundColor ="blue";
+     button.style.color="green";
+
+// Access the button element
+     var button = document.getElementById("myButton");
+
+// Add a click event listener
+     button.addEventListener("click", function() {
+     alert("Button clicked!");
+});
+
+// Access the image element
+     var image = document.getElementById("myImage");
+
+// Change the source and alt attributes
+     image.src = "newimage.jpg";
+     image.alt = "A new image";
+
+
+     document.getElementById("p2").style.color = "blue";
+  document.getElementById("a1").style.color="black";
+
+document.getElementById("btn").style.color="green";
+ 
+ event in element
+ function changeText(id) {
+  id.innerHTML = "Ooops!";
+    }
+    function displayDate(id2){
+     id.innerHTML="24/09/23";
+    }
+    // addEventListener
+
+    element.addEventListener("click", function(){ alert("Hello World!"); });
+
+  </script>
+  
+</body>
+
+</html>
